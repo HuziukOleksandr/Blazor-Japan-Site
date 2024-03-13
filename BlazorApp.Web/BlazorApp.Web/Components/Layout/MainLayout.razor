@@ -1,6 +1,11 @@
-﻿@inherits LayoutComponentBase
+﻿@using BlazorApp.Web.Components.Shared
+@inherits LayoutComponentBase
 
-@Body
+<body>
+    <Header />
+    @Body
+    <Footer />
+</body>
 
 <div id="blazor-error-ui">
     An unhandled error has occurred.

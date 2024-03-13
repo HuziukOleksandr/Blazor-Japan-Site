@@ -1,0 +1,15 @@
+﻿.navigation {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+div a {
+    color: white;
+    transform: none;
+    text-decoration: none;
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
