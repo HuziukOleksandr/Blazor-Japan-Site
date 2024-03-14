@@ -1,0 +1,59 @@
+﻿
+<div class="benefits">
+    <h1 class="title">
+        Benefits of Odigo
+    </h1>
+    <div class="cards">
+        @for(int x=0; x<3; x++)
+        {
+            <BenefitsCard 
+                CardIcon="@CardList[x].Icon"
+                CardTitle="@CardList[x].Title"
+                CardText="@CardList[x].Text"
+                
+            />
+        }
+        
+    </div>
+</div>
+
+
+@code {
+    public class Card
+    {
+        public string? Title { get; set; }
+        public string? Text { get; set; }
+        public string? Icon { get; set; }
+        public Card (string Title, string Text, string Icon)
+        {
+            this.Title = Title;
+            this.Text = Text;
+            this.Icon = Icon;
+        }
+    };
+
+    private List<Card> CardList = new List<Card>()
+    {
+        new Card(  
+            "Welcome to Odigo!",
+            "Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.",
+            "odigo-Icon"
+        ),
+        new Card(
+            "Your Personal Japan Guide",
+            "Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.",
+            "person-Icon"
+        ),
+        new Card(
+            "Promoting Local Businesses",
+            "Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.",
+            "busines-Icon"
+        ),
+
+    };
+
+
+
+   
+
+}

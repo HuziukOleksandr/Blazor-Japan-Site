@@ -1,0 +1,36 @@
+﻿<div class="card">
+    <img 
+        class="image"
+        src="../images/@(CardIcon).svg"
+        alt="@(CardIcon)" 
+    />
+    <h1 class="title">
+        @CardTitle
+    </h1>
+    <p class="text">
+       @CardText
+    </p>
+    <button class="button">
+        Learn more
+        <img 
+            src="../images/arrow.svg" 
+            alt="Alternate Text" 
+        />
+    </button>
+</div>
+
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public string CardTitle { get; set; } = "";
+
+    [Parameter]
+    [EditorRequired]
+    public string CardText { get; set; } = "";
+
+    [Parameter]
+    [EditorRequired]
+    public string CardIcon { get; set; } = "";
+
+}

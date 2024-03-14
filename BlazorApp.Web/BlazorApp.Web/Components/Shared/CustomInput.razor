@@ -1,0 +1,20 @@
+﻿
+<div class="inputs">
+    <img 
+        class="input_image" 
+        src="../images/input-oval.svg" 
+        alt="Alternate Text" 
+    />
+    <input 
+        class="input" 
+        type="type" 
+        name="name"
+        placeholder="@InputPlaceholder" 
+    />
+</div>
+    
+@code {
+    [Parameter]
+    [EditorRequired]
+    public string InputPlaceholder { get; set; } = "input";
+}

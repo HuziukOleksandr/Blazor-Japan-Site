@@ -1,0 +1,11 @@
+﻿
+<button class="button">
+    @ButtonName
+</button>
+
+@code {
+    [Parameter]
+    [EditorRequired]
+    public string ButtonName { get; set; } = "button";
+
+}
