@@ -3,6 +3,7 @@
     width: 100%;
     min-height: 980px;
     position: relative;
+    z-index: 1;
 }
 
 .main ::deep .benefits {
@@ -12,6 +13,4 @@
     left: 50%;
     transform: translateX(-50%);
 }
-.main ::deep .preview {
-    position: relative;
-}
+
