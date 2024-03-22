@@ -1,0 +1,32 @@
+﻿.visit {
+    max-width: 1260px;
+    width: 100%;
+    min-height: 735px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+.title {
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 44px;
+    color: #102746;
+}
+
+.line {
+    width: 250px;
+    height: 4px;
+    background-color: #006DFE;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.content {
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 50px;
+}
+

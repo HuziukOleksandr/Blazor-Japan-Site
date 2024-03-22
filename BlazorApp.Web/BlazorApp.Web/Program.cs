@@ -1,4 +1,7 @@
-using BlazorApp.Web.Components;
+using BlazorApp.Web;
+using BlazorApp.Web.Shared;
+using BlazorApp.Web.Pages;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

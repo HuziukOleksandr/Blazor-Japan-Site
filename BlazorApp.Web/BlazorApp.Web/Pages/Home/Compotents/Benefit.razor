@@ -1,4 +1,5 @@
-﻿
+﻿@using BlazorApp.Web.Pages.Home.Compotents.BenefitComponents
+
 <div class="benefits">
     <h1 class="title">
         Benefits of Odigo
@@ -6,14 +7,12 @@
     <div class="cards">
         @for(int x=0; x<3; x++)
         {
-            <BenefitsCard 
+            <BenefitCard
                 CardIcon="@CardList[x].Icon"
                 CardTitle="@CardList[x].Title"
                 CardText="@CardList[x].Text"
-                
             />
         }
-        
     </div>
 </div>
 

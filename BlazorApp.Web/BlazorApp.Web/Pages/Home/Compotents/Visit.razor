@@ -1,0 +1,20 @@
+﻿@using BlazorApp.Web.Pages.Home.Compotents.VisitComponents
+
+<div class="visit">
+    <h1 class="title">
+        Today top places to visit
+    </h1>
+    
+    <hr class="line" />
+
+    <div class="content">
+        @for(int x=0; x<6; x++)
+        {
+            <VisitCard />
+        }
+    </div>
+</div>
+
+@code {
+
+}
