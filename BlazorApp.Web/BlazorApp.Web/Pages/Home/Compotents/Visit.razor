@@ -10,11 +10,79 @@
     <div class="content">
         @for(int x=0; x<6; x++)
         {
-            <VisitCard />
+            <VisitCard 
+                Title="@CardList[x].Title"
+                Text="@CardList[x].Text"
+                Image="@CardList[x].Image"
+                Likes="@CardList[x].Likes"
+                Comments="@CardList[x].Comments" 
+            />
         }
     </div>
 </div>
 
 @code {
+    public class Card
+    {
+        public string? Title { get; set; }
+        public string? Text { get; set; }
+        public string? Image { get; set; }
+        public string? Likes { get; set; }
+        public string? Comments { get; set; }
+        public Card(string Title, string Text, string Image, string Likes, string Comments)
+        {
+            this.Title = Title;
+            this.Text = Text;
+            this.Image = Image;
+            this.Likes = Likes;
+            this.Comments = Comments;
 
+        }
+    };
+
+    private List<Card> CardList = new List<Card>()
+    {
+        new Card(
+            "NAGOYA",
+            "Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.",
+            "visit-nagoya",
+            "221",
+            "53"
+        ),
+        new Card(
+            "NIIGATA",
+            "Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.",
+            "visit-niigata",
+            "345",
+            "34"
+        ),
+        new Card(
+            "OSAKA",
+            "Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.",
+            "visit-osaka",
+            "4543",
+            "554"
+        ),
+        new Card(
+            "SAITAMA",
+            "Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.",
+            "visit-saitama",
+            "78",
+            "45"
+        ),
+        new Card(
+            "UENO",
+            "Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.",
+            "visit-ueno",
+            "34",
+            "23"
+        ),
+        new Card(
+            "SHIBUYA",
+            "Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.",
+            "visit-shibuya",
+            "975",
+            "45"
+        )
+    };
 }

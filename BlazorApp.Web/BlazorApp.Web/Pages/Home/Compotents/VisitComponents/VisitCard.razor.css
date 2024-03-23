@@ -8,11 +8,77 @@
 .preview {
     width: 100%;
     height: 380px;
-    
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.preview__image {
+    width: 387px;
+    height: 380px;
 }
 
 .preview__content {
     width: 100%;
     height: 55px;
-    background-color: aqua;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    padding: 15px 25px;
+}
+
+.shadow:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21,24,36,.7);
+    top: 0;
+    left: 0;
+}
+
+.content__title, .numbers {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 99;
+}
+
+.content__items {
+    max-width: 105px;
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    position: relative;
+    z-index: 99;
+}
+
+.content__likes, .content__comments {
+    display: flex;
+    gap: 5px;
+}
+
+.icon {
+    width: 15px;
+}
+
+.card__text {
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #102746;
+    margin-bottom: 30px;
+}
+
+.card ::deep .button {
+    padding: 12px 19px;
+    height: 40px;
+    font-size: 16px;
 }

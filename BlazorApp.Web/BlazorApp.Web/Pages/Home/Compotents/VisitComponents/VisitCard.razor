@@ -1,11 +1,59 @@
-﻿<div class="card">
-    <div class="preview">
-        <img src="../../images/visit-nagoya.png" alt="Alternate Text" />
-        <div class="preview__content">
+﻿@using BlazorApp.Web.Shared.Components
 
+<div class="card">
+    <div class="preview">
+        <img 
+            class="preview__image" 
+            src="../../images/@(Image).png"
+            alt="@(Image)"
+        />
+        <div class="preview__content shadow">
+            <h1 class="content__title">
+               @Title
+            </h1>
+
+            <div class="content__items">
+                <div class="content__likes">
+                    <p class="numbers">
+                        @Likes
+                    </p>
+                    <img class="icon" src="../images/likes.svg" alt="likes" />
+                </div>
+                <div class="content__comments">
+                    <p class="numbers">
+                        @Comments
+                    </p>
+                    <img class="icon" src="../images/comments.svg" alt="comments" />
+                </div>
+            </div>
         </div>
     </div>
+    <p class="card__text">
+        @Text
+    </p>
+
+    <CustomButton ButtonName="See More" />
+
+    
 </div>
 @code {
+
+    [Parameter]
+    [EditorRequired]
+    public string Image { get; set; } = "";
+    [Parameter]
+    [EditorRequired]
+    public string Title { get; set; } = "";
+    [Parameter]
+    [EditorRequired]
+    public string Likes { get; set; } = "";
+    [Parameter]
+    [EditorRequired]
+    public string Comments { get; set; } = "";
+    [Parameter]
+    [EditorRequired]
+    public string Text { get; set; } = "";
+
+
 
 }
